@@ -117,8 +117,19 @@ function initAnimations() {
   })
 
   // 5. プロフィールセクションの登場
+  gsap.from('.profile-img-wrap', {
+    x: -30,
+    opacity: 0,
+    duration: 1.5,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.profile-grid',
+      start: 'top 75%'
+    }
+  })
+
   gsap.from('.profile-text-wrap', {
-    y: 30,
+    x: 30,
     opacity: 0,
     duration: 1.5,
     ease: 'power3.out',
