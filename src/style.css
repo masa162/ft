@@ -742,3 +742,144 @@ h1, h2, h3 {
     text-align: center;
   }
 }
+
+/* -------------------------------------------------------------
+  新規セクション：施術当日の流れ (Our Session Flow)
+------------------------------------------------------------- */
+.flow-section {
+  padding: 120px 0;
+  background-color: var(--bg-secondary);
+}
+
+.flow-heading {
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.flow-card {
+  background-color: var(--bg-primary);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  transition: var(--transition-smooth);
+}
+
+.flow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.flow-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--border-color);
+}
+
+.flow-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.flow-card:hover .flow-img {
+  transform: scale(1.05);
+}
+
+.flow-content {
+  padding: 24px;
+}
+
+.flow-step-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.flow-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.flow-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------------
+  新規セクション：ライフスタイルギャラリー (Lifestyle Gallery)
+------------------------------------------------------------- */
+.lifestyle-gallery {
+  margin-top: 80px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 60px;
+}
+
+.lifestyle-heading {
+  font-size: 24px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.lifestyle-card {
+  background-color: var(--bg-secondary);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow-premium);
+  transition: var(--transition-smooth);
+}
+
+.lifestyle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.lifestyle-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.lifestyle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lifestyle-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* モバイル用追加レスポンシブ */
+@media (max-width: 768px) {
+  .flow-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .lifestyle-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
